@@ -7,9 +7,8 @@
     min-height: 100vh;
     display: grid;
     grid:
-        "header"
-        "banner"
-        / auto;
+        "header" 12rem "banner" auto / auto;
+    background: var(--violet-light);
 
 }
 
@@ -22,7 +21,7 @@ header {
         padding: 1rem;
         display: grid;
         grid:
-            "logo nav" / 100px auto;
+            "logo nav" / 10rem auto;
 
         position: sticky;
 
@@ -69,18 +68,20 @@ header {
 
     img {
         border-radius: 50%;
+        border: 0.8rem solid var(--violet);
     }
 
     .title {
         text-transform: uppercase;
         letter-spacing: 1.8rem;
         font-size: 4rem;
-
         font-weight: 700;
+        padding: 3rem 0;
     }
 
     .subtitle {
         font-size: 3rem;
+        padding-bottom: 2rem;
     }
 
     .banner-text {
@@ -90,10 +91,7 @@ header {
     }
 }
 
-main {
-    max-width: 1200px;
-    margin: auto;
-    grid-area: main;
+.grid-container-main {
     display: grid;
     grid:
         "main aside"
@@ -101,6 +99,12 @@ main {
         "main aside"
         "main aside"
         / auto 350px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    grid-area: main;
     background: var(--light);
 
     aside {

@@ -114,6 +114,7 @@ html {
 body {
   font-family: var(--font-roboto-r);
   font-size: 1.6rem;
+  color: var(--dark);
 }
 
 h1,
@@ -123,6 +124,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-cnew);
+  color: var(--violet);
 }
 
 img {
@@ -132,7 +134,8 @@ img {
 .grid-container {
   min-height: 100vh;
   display: grid;
-  grid: "header" "banner"/auto;
+  grid: "header" 12rem "banner" auto/auto;
+  background: var(--violet-light);
 }
 
 header {
@@ -143,7 +146,7 @@ header nav {
   background: var(--violet);
   padding: 1rem;
   display: grid;
-  grid: "logo nav"/100px auto;
+  grid: "logo nav"/10rem auto;
   position: sticky;
 }
 header nav img {
@@ -182,15 +185,18 @@ header nav ul li a:hover {
 }
 .banner img {
   border-radius: 50%;
+  border: 0.8rem solid var(--violet);
 }
 .banner .title {
   text-transform: uppercase;
   letter-spacing: 1.8rem;
   font-size: 4rem;
   font-weight: 700;
+  padding: 3rem 0;
 }
 .banner .subtitle {
   font-size: 3rem;
+  padding-bottom: 2rem;
 }
 .banner .banner-text {
   font-size: 1.8rem;
@@ -198,12 +204,15 @@ header nav ul li a:hover {
   text-align: justify;
 }
 
+.grid-container-main {
+  display: grid;
+  grid: "main aside" "main aside" "main aside" "main aside"/auto 350px;
+}
+
 main {
   max-width: 1200px;
   margin: auto;
   grid-area: main;
-  display: grid;
-  grid: "main aside" "main aside" "main aside" "main aside"/auto 350px;
   background: var(--light);
 }
 main aside {
