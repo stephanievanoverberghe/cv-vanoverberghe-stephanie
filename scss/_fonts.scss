@@ -1,0 +1,31 @@
+:root {
+
+    // font-family
+    @font-face {
+        font-family: 'Roboto bold';
+        src: url(./../public/assets/fonts/Roboto-Bold.ttf) format('truetype');
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: 'Roboto regular';
+        src: url(./../public/assets/fonts/Roboto-Regular.ttf) format('truetype');
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: 'Roboto light';
+        src: url(./../public/assets/fonts/Roboto-Light.ttf) format('truetype');
+        font-weight: 300;
+    }
+
+    --font-cnew: 'Courier New',
+    Courier,
+    monospace;
+    --font-roboto-b: 'Roboto bold',
+    sans-serif;
+    --font-roboto-r: 'Roboto regular',
+    sans-serif;
+    --font-roboto-l: 'Roboto light',
+    sans-serif;
+}
