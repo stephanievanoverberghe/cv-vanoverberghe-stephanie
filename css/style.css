@@ -197,7 +197,7 @@ header nav ul li a:hover {
 }
 .banner .banner-subtitle {
   font-size: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 7rem;
   font-weight: 300;
 }
 .banner .banner-text {
@@ -208,7 +208,7 @@ header nav ul li a:hover {
 
 main {
   display: grid;
-  grid: "main aside" 1fr "main aside" 1fr "main aside" 1fr "main aside" 1fr/auto 350px;
+  grid: "main aside" auto "main aside" auto "main aside" auto "main aside" auto/auto 350px;
   max-width: 1200px;
   margin: auto;
   grid-area: main;
@@ -219,7 +219,7 @@ main section {
 main .section-subtitle {
   font-size: 3rem;
 }
-main .training {
+main .section-content {
   padding: 2.5rem 0 0 0;
 }
 main hr {
