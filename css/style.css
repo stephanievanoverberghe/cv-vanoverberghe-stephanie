@@ -122,7 +122,98 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-roboto-b);
+  font-family: var(--font-cnew);
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  grid: "header" "banner"/auto;
+}
+
+header {
+  grid-area: header;
+  background: var(--dark);
+}
+header nav {
+  background: var(--violet);
+  padding: 1rem;
+  display: grid;
+  grid: "logo nav"/100px auto;
+  position: sticky;
+}
+header nav img {
+  grid-area: logo;
+  border-radius: 50%;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  margin: 0 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+header nav ul li a {
+  color: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  color: var(--orange-hover);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--orange-hover);
+}
+
+.banner {
+  grid-area: banner;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.banner img {
+  border-radius: 50%;
+}
+.banner .title {
+  text-transform: uppercase;
+  letter-spacing: 1.8rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner .subtitle {
+  font-size: 3rem;
+}
+.banner .banner-text {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-align: justify;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  grid-area: main;
+  display: grid;
+  grid: "main aside" "main aside" "main aside" "main aside"/auto 350px;
+  background: var(--light);
+}
+main aside {
+  grid-area: aside;
+  background: var(--white);
+}
+
+footer {
+  grid-area: footer;
+  background: var(--dark);
 }
 
 /*# sourceMappingURL=style.css.map */
