@@ -500,6 +500,8 @@ img {
 }
 .grid-container header nav ul li a:hover {
   color: var(--secondary);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary);
 }
 .grid-container header .banner {
   grid-area: banner;
