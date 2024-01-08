@@ -1,9 +1,10 @@
-@use "reset";
 @use "fonts";
+@use "reset";
 @use "base";
 @use 'utilities';
-@use 'medias';
+@use 'animations';
 @use 'classes';
+@use 'medias';
 
 .grid-container {
     display: grid;
