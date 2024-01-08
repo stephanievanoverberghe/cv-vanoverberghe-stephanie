@@ -1,11 +1,15 @@
 :root {
+  --primary: #441151;
+  --primary-light: #f5edf7;
+  --primary-middle: #82568d;
+  --primary-dark: #1e0026;
+  --secondary: #f15025;
+  --secondary-light: #e9b8aa;
+  --secondary-dark: #290e06;
   --white: #fff;
-  --light: #d9d9d9;
+  --light: #ddd;
+  --middle: #838383;
   --dark: #333;
-  --violet: #441151;
-  --violet-light: #f5edf7;
-  --orange: #e9b8aa;
-  --orange-hover: #f15025;
 }
 
 /*# sourceMappingURL=variables.css.map */

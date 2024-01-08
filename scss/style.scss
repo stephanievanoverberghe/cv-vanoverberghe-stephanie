@@ -1,158 +1,186 @@
 @use "reset";
 @use "fonts";
 @use "base";
+@use 'utils';
 @use 'medias';
+@use 'classes';
 
 .grid-container {
-    min-height: 100vh;
     display: grid;
     grid:
-        "header" 12rem "banner" auto / auto;
-    background: var(--violet-light);
+        "header header" auto "main aside" auto "footer footer" auto / auto;
 
-}
+    // *********************************************************************************
+    // Header
 
-header {
-    grid-area: header;
-    background: var(--dark);
-    position: sticky;
-    top: 0;
-
-    nav {
-        background: var(--violet);
-        padding: 1rem;
+    header {
+        grid-area: header;
+        min-height: 100vh;
         display: grid;
         grid:
-            "logo nav" / 10rem auto;
+            "nav" 12rem "banner" auto / auto;
 
-
-        img {
-            grid-area: logo;
-            border-radius: 50%;
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
+        nav {
+            grid-area: nav;
+            background: var(--primary);
+            display: grid;
             align-items: center;
+            grid:
+                "picture nav-items" auto / auto;
 
-            li {
-                margin: 0 2rem;
-                font-weight: 700;
-                text-transform: uppercase;
+            img {
+                width: 10rem;
+            }
 
+            ul {
+                display: flex;
 
-                a {
-                    color: var(--orange);
-                    cursor: pointer;
-                    transition: all .3s;
+                li {
+                    padding: 0 2rem;
 
-                    &:hover {
-                        color: var(--orange-hover);
-                        padding-bottom: 0.5rem;
-                        border-bottom: 1px solid var(--orange-hover);
+                    a {
+                        color: var(--secondary-light);
+                        font-weight: 700;
+                        transition: all .3s;
+
+                        &:hover {
+                            color: var(--secondary);
+                        }
                     }
                 }
             }
         }
-    }
-}
 
-.banner {
-    grid-area: banner;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
+        .banner {
+            grid-area: banner;
+            background: var(--primary-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-    img {
-        border-radius: 50%;
-        border: 0.8rem solid var(--violet);
-    }
+            img {
+                border-radius: 50%;
+                border: 1rem solid var(--primary);
+            }
 
-    .banner-title {
-        text-transform: uppercase;
-        letter-spacing: 1.8rem;
-        font-size: 4rem;
-        padding: 3rem 0;
+
+        }
     }
 
-    .banner-subtitle {
-        font-size: 3rem;
-        padding-bottom: 7rem;
-        font-weight: 300;
+    // *********************************************************************************
+    // Main
+
+    main {
+        grid-area: main;
+
+        p {
+            letter-spacing: 0.1rem;
+            line-height: 3rem;
+        }
+
+        .experience {
+            display: flex;
+            margin: 6rem 0;
+
+            .timeline {
+                text-align: center;
+                color: var(--primary-dark);
+                border-right: 1px solid var(--light);
+
+                p {
+                    width: 100px;
+                }
+            }
+
+            .content {
+                padding: 0 1rem;
+
+                ul {
+                    list-style: circle;
+                }
+            }
+        }
     }
 
-    .banner-text {
-        font-size: 1.8rem;
-        letter-spacing: 0.2rem;
-        text-align: justify;
-    }
-}
-
-main {
-    display: grid;
-    grid:
-        "main aside" auto "main aside" auto "main aside" auto "main aside" auto / auto 350px;
-    max-width: 1200px;
-    margin: auto;
-    grid-area: main;
-
-    section {
-        max-width: 70rem;
-    }
-
-    .section-subtitle {
-        font-size: 3rem;
-    }
-
-    .section-content {
-        padding: 2.5rem 0 0 0;
-    }
-
-    hr {
-        border: 1px solid var(--violet-light);
-    }
-
-    section,
-    aside {
-        padding: 50px 0;
-    }
-
-    section h3 {
-        font-size: 2rem;
-        font-weight: 300;
-        padding-bottom: 1.2rem;
-    }
-
-    section p {
-        padding-bottom: 0.8rem;
-    }
+    // *********************************************************************************
+    // Aside
 
     aside {
         grid-area: aside;
 
-        .section-subtitle {
-            padding-bottom: 2.5rem;
-        }
-
-        .info {
-            padding-bottom: 2rem;
-        }
-
-        .info p {
-            padding-bottom: 0.8rem;
-        }
     }
 
-    .section-violet {
-        background: var(--violet-light);
-    }
-}
+    // *********************************************************************************
+    // Footer
 
-footer {
-    grid-area: footer;
-    background: var(--dark);
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--primary);
+
+
+        .footer-title {
+            font-size: 3rem;
+            letter-spacing: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--secondary);
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+
+            .prefix {
+                background: linear-gradient(to right, var(--primary), var(--primary-light));
+                padding: 1rem 2rem;
+                color: white;
+                font-size: 2rem;
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+            }
+
+            button {
+                background: var(--text);
+                border: 0;
+                cursor: pointer;
+
+                .postfix {
+                    background: linear-gradient(to right, var(--primary-light), var(--primary));
+                    padding: 1rem 2rem;
+                    color: white;
+                    font-size: 2rem;
+                    border-top-right-radius: 0.5rem;
+                    border-bottom-right-radius: 0.5rem;
+                    transition: all .3s;
+
+                    &:hover {
+                        background: linear-gradient(to right, var(--secondary-light), var(--secondary));
+                    }
+                }
+            }
+
+            input {
+                outline: 0;
+                border: 0;
+                min-width: 400px;
+                padding: 1rem 2rem;
+                line-height: 2rem;
+                background: var(--primary-light);
+
+                &::placeholder {
+                    color: var(--primary-middle);
+                }
+            }
+        }
+
+
+    }
+
+
+
 }
