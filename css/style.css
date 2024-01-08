@@ -382,6 +382,10 @@ img {
 }
 .cards .card .card-body {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .cards .card .card-body .card-title {
   letter-spacing: 0.3rem;
@@ -393,6 +397,20 @@ img {
 }
 .cards .card .card-body .card-text {
   text-align: justify;
+}
+
+.btn {
+  border: none;
+  background: var(--primary);
+  color: var(--primary-light);
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: var(--secondary);
+  color: var(--white);
 }
 
 .banner-title {
