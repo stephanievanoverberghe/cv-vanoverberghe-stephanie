@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 :root {
   --font-cnew: "Courier New",
   Courier,
@@ -393,6 +401,9 @@ img {
   text-transform: uppercase;
   color: var(--secondary);
 }
+.text-subtitle {
+  font-family: var(--font-cnew);
+}
 .text-content {
   text-align: justify;
 }
@@ -494,7 +505,7 @@ img {
   background: linear-gradient(to right, var(--primary), var(--primary-light));
   padding: 1rem 2rem;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
@@ -520,7 +531,7 @@ img {
   border: 0;
   min-width: 400px;
   padding: 1rem 2rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
   background: var(--primary-light);
 }
 .grid-container footer form input::placeholder {

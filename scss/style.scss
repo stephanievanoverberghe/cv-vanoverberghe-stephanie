@@ -1,7 +1,7 @@
 @use "reset";
 @use "fonts";
 @use "base";
-@use 'utils';
+@use 'utilities';
 @use 'medias';
 @use 'classes';
 
@@ -139,7 +139,7 @@
                 background: linear-gradient(to right, var(--primary), var(--primary-light));
                 padding: 1rem 2rem;
                 color: white;
-                font-size: 2rem;
+                font-size: 1.8rem;
                 border-top-left-radius: 0.5rem;
                 border-bottom-left-radius: 0.5rem;
             }
@@ -169,7 +169,7 @@
                 border: 0;
                 min-width: 400px;
                 padding: 1rem 2rem;
-                line-height: 2rem;
+                line-height: 2.2rem;
                 background: var(--primary-light);
 
                 &::placeholder {

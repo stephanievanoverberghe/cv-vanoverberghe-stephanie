@@ -35,6 +35,9 @@
   text-transform: uppercase;
   color: var(--secondary);
 }
+.text-subtitle {
+  font-family: var(--font-cnew);
+}
 .text-content {
   text-align: justify;
 }
