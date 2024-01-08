@@ -1,5 +1,6 @@
 .banner {
     &-title {
+        color: var(--primary-light);
         font-size: 4rem;
         line-height: 6rem;
         font-weight: 700;
@@ -9,6 +10,7 @@
     }
 
     &-subtitle {
+        color: var(--white);
         letter-spacing: 0.5rem;
         font-size: 2rem;
         font-weight: 300;
@@ -16,6 +18,7 @@
     }
 
     &-text {
+        color: var(--primary-light);
         padding: 2rem 2rem;
         text-align: center;
     }
@@ -50,5 +53,15 @@
 
     &-content {
         text-align: justify;
+    }
+}
+
+.star {
+    &-primary {
+        color: var(--primary-dark);
+    }
+
+    &-primary-middle {
+        color: var(--primary-middle);
     }
 }
