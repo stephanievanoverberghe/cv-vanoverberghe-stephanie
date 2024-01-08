@@ -1,0 +1,36 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        background: var(--primary-light);
+        height: 40rem;
+        max-width: 30rem;
+        border-radius: 5px;
+
+        .card-img-top {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body {
+            padding: 2rem;
+
+            .card-title {
+                letter-spacing: 0.3rem;
+                font-size: 1.8rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--secondary);
+                text-align: center;
+            }
+
+            .card-text {
+                text-align: justify;
+            }
+        }
+    }
+
+}

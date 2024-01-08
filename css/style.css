@@ -364,6 +364,37 @@ img {
   padding: 5rem !important;
 }
 
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card {
+  background: var(--primary-light);
+  height: 40rem;
+  max-width: 30rem;
+  border-radius: 5px;
+}
+.cards .card .card-img-top {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.cards .card .card-body {
+  padding: 2rem;
+}
+.cards .card .card-body .card-title {
+  letter-spacing: 0.3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary);
+  text-align: center;
+}
+.cards .card .card-body .card-text {
+  text-align: justify;
+}
+
 .banner-title {
   color: var(--primary-light);
   font-size: 4rem;
