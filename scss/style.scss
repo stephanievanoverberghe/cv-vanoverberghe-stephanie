@@ -5,13 +5,18 @@
 @use 'cards';
 @use 'buttons';
 @use 'animations';
+@use 'medias-queries';
 @use 'classes';
-@use 'medias';
 
 .grid-container {
     display: grid;
     grid:
         "header header" auto "main aside" auto "footer footer" auto / auto;
+
+    @include xs {
+        grid:
+            "header" auto "aside" auto "main" auto "footer" auto / auto;
+    }
 
     // *********************************************************************************
     // Header
@@ -24,6 +29,11 @@
         grid:
             "nav" 12rem "banner" auto / auto;
 
+        @include xs {
+            grid:
+                "nav" auto "banner" auto / auto;
+        }
+
         nav {
             grid-area: nav;
             background: var(--primary);
@@ -35,6 +45,10 @@
 
             img {
                 width: 10rem;
+
+                // @include xs {
+                //     width: 5rem;
+                // }
             }
 
             ul {
