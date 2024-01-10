@@ -343,10 +343,10 @@
         <footer id="contact" class="p-5">
             <h2 class="footer-title mb-2">Pour vous recontactez</h2>
             <p class="footer-subtitle mb-4">Laissez-moi votre mail</p>
-            <form action="#">
+            <form name="contact" method="POST" data-netlify="true">
                 <i class="bi bi-envelope-open prefix"></i>
-                <input type="text" placeholder="Votre email">
-                <button>
+                <input type="text" name="email" placeholder="Votre email">
+                <button type="submit">
                     <i class="bi bi-send postfix"></i>
                 </button>
             </form>
