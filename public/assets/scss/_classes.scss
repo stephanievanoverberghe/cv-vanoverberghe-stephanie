@@ -3,42 +3,42 @@
 .banner {
     &-title {
         color: var(--primary-light);
-        font-size: 4rem;
-        line-height: 6rem;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        letter-spacing: 1rem;
         font-weight: 700;
-        letter-spacing: 2.5rem;
         text-align: center;
         padding: 3rem 0;
 
-        @include xs {
-            font-size: 2.5rem;
-            line-height: 4rem;
-            letter-spacing: 1rem;
+        @include sm {
+            font-size: 4rem;
+            line-height: 6rem;
+            letter-spacing: 2.5rem;
         }
     }
 
     &-subtitle {
         color: var(--white);
-        letter-spacing: 0.5rem;
-        font-size: 2rem;
         font-weight: 300;
         text-align: center;
         text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 0;
 
-        @include xs {
+        @include sm {
+            letter-spacing: 0.5rem;
             font-size: 2rem;
-            letter-spacing: 0;
         }
     }
 
     &-text {
         color: var(--primary-light);
-        padding: 2rem;
-        text-align: center;
+        padding: 2rem 1rem;
+        text-align: justify;
 
-        @include xs {
-            padding: 2rem 1rem;
-            text-align: justify;
+        @include sm {
+            padding: 2rem;
+            text-align: center;
         }
     }
 }
@@ -50,18 +50,18 @@
         font-weight: 700;
         text-transform: uppercase;
 
-        @include xs {
-            font-size: 2.2rem;
-            text-align: center;
-        }
+        // @include xs {
+        //     font-size: 2.2rem;
+        //     text-align: center;
+        // }
 
-        @include sm {
-            text-align: center;
-        }
+        // @include sm {
+        //     text-align: center;
+        // }
 
-        @include md {
-            text-align: center;
-        }
+        // @include md {
+        //     text-align: center;
+        // }
     }
 
     &-content {
@@ -78,10 +78,10 @@
         text-transform: uppercase;
         color: var(--secondary);
 
-        @include xs {
-            font-size: 1.8rem;
-            text-align: center;
-        }
+        // @include xs {
+        //     font-size: 1.8rem;
+        //     text-align: center;
+        // }
     }
 
     &-subtitle {
@@ -99,17 +99,17 @@
 
     &-md-content {
 
-        @include xs {
-            text-align: center;
-        }
+        // @include xs {
+        //     text-align: center;
+        // }
 
-        @include sm {
-            text-align: center;
-        }
+        // @include sm {
+        //     text-align: center;
+        // }
 
-        @include md {
-            text-align: center;
-        }
+        // @include md {
+        //     text-align: center;
+        // }
     }
 }
 

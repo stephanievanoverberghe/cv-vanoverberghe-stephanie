@@ -5,17 +5,17 @@
     justify-content: center;
     align-items: center;
 
-    @include xs {
-        flex-direction: column;
-    }
+    // @include xs {
+    //     flex-direction: column;
+    // }
 
-    @include sm {
-        flex-direction: column;
-    }
+    // @include sm {
+    //     flex-direction: column;
+    // }
 
-    @include lg {
-        flex-direction: column;
-    }
+    // @include lg {
+    //     flex-direction: column;
+    // }
 
 
 
@@ -25,17 +25,17 @@
         max-width: 30rem;
         border-radius: 5px;
 
-        @include xs {
-            margin: 0 0 2rem 0 !important;
-        }
+        // @include xs {
+        //     margin: 0 0 2rem 0 !important;
+        // }
 
-        @include sm {
-            margin: 0 0 2rem 0 !important;
-        }
+        // @include sm {
+        //     margin: 0 0 2rem 0 !important;
+        // }
 
-        @include lg {
-            margin: 0 0 2rem 0 !important;
-        }
+        // @include lg {
+        //     margin: 0 0 2rem 0 !important;
+        // }
 
         .card-img-top {
             width: 100%;
@@ -47,7 +47,7 @@
             padding: 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
             .card-title {
@@ -62,13 +62,17 @@
             .card-text {
                 text-align: justify;
 
-                @include xs {
-                    padding-bottom: 1rem;
-                }
+                // @include xs {
+                //     padding-bottom: 1rem;
+                // }
 
-                @include sm {
-                    padding-bottom: 1rem;
-                }
+                // @include sm {
+                //     padding-bottom: 1rem;
+                // }
+            }
+
+            .btn {
+                margin-top: auto;
             }
         }
     }

@@ -11,21 +11,12 @@
 .grid-container {
     display: grid;
     grid:
-        "header header" auto "main aside" auto "footer footer" auto / auto;
-
-    @include xs {
-        grid:
-            "header" auto "aside" auto "main" auto "footer" auto / auto;
-    }
+        "header" auto "aside" auto "main" auto "footer" auto / auto;
 
     @include sm {
         grid:
-            "header" auto "aside" auto "main" auto "footer" auto / auto;
-    }
+            "header header" auto "main aside" auto "footer footer" auto / auto;
 
-    @include md {
-        grid:
-            "header" auto "aside" auto "main" auto "footer" auto / auto;
     }
 
     // *********************************************************************************
@@ -35,134 +26,68 @@
         grid-area: header;
         min-height: 100vh;
         display: grid;
-
         grid:
-            "nav" 12rem "banner" auto / auto;
-
-        @include xs {
-            grid:
-                "nav" auto "banner" auto / auto;
-        }
-
-        @include sm {
-            grid:
-                "nav" auto "banner" auto / auto;
-        }
+            "nav" auto "banner" auto / auto;
 
         @include md {
             grid:
-                "nav" auto "banner" auto / auto;
+                "nav" 12rem "banner" auto / auto;
         }
 
         nav {
             grid-area: nav;
-            background: var(--primary);
-            display: grid;
-            align-items: center;
-
             grid:
-                "picture nav-items" auto / auto;
-
-            @include xs {
-                grid:
-                    "picture" auto "nav-items" auto /auto;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: 2rem 0;
-            }
-
-            @include sm {
-                grid:
-                    "picture" auto "nav-items" auto /auto;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: 2rem 0;
-            }
+                "picture" auto "nav-items" auto /auto;
+            padding: 2rem 0;
+            background: var(--primary);
 
             @include md {
                 grid:
-                    "picture" auto "nav-items" auto /auto;
-                justify-content: center;
+                    "picture nav-items" auto / auto;
+                display: grid;
                 align-items: center;
-                text-align: center;
-                padding: 2rem 0;
             }
 
-            img {
-                width: 10rem;
+            .menu-burger {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
 
-                @include xs {
-                    width: 7rem;
-                    display: block;
-                    margin: 0 auto;
-                    padding-bottom: 2rem;
+                img {
+                    width: 10rem;
                 }
 
-                @include sm {
-                    display: block;
-                    margin: 0 auto;
-                    padding-bottom: 2rem;
-                }
-
-                @include md {
-                    display: block;
-                    margin: 0 auto;
-                    padding-bottom: 2rem;
+                .icon-burger {
+                    font-size: 5rem;
+                    color: var(--secondary);
+                    border: 1px solid var(--secondary-light);
+                    padding: 0 2rem;
+                    border-radius: 1rem;
                 }
             }
+
 
             ul {
                 display: flex;
-
-                @include xs {
-                    flex-direction: column;
-                }
-
-                @include sm {
-                    flex-direction: column;
-                }
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 5rem 0 3rem 0;
 
                 li {
-                    padding: 0 2rem;
-
-                    @include xs {
-                        padding: 1rem 0;
-                    }
-
-                    @include sm {
-                        padding: 1rem 0;
-                    }
-
+                    padding: 1rem 0;
 
                     a {
                         color: var(--secondary-light);
                         font-weight: 700;
                         transition: all .3s;
-
-                        @include xs {
-                            font-size: 1.8rem;
-                        }
-
-                        @include sm {
-                            font-size: 1.8rem;
-                        }
+                        font-size: 1.8rem;
 
                         &:hover {
                             color: var(--secondary);
                             padding-bottom: 1rem;
                             border-bottom: 1px solid var(--secondary);
-
-                            @include xs {
-                                padding-bottom: 0;
-                                border-bottom: 0;
-                            }
-
-                            @include sm {
-                                padding-bottom: 0;
-                                border-bottom: 0;
-                            }
                         }
                     }
                 }
@@ -176,35 +101,22 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 3rem 0;
 
-            @include xs {
-                padding: 3rem 0;
-            }
-
-            @include sm {
-                padding: 3rem 0;
-            }
-
-            @include md {
-                padding: 3rem 0;
-            }
-
-            @include lg {
-                padding: 3rem 0;
-            }
+            @include sm {}
 
             img {
+                width: 20rem;
                 border-radius: 50%;
-                border: 1rem solid var(--primary);
-
-                @include xs {
-                    width: 20rem;
-                    border: 0;
-                }
+                border: 0;
 
                 @include sm {
-                    width: 30rem;
+                    border: 1rem solid var(--primary);
                 }
+
+                // @include sm {
+                //     width: 30rem;
+                // }
             }
 
 
@@ -217,13 +129,13 @@
     main {
         grid-area: main;
 
-        @include xs {
-            padding: 3rem 1rem !important;
-        }
+        // @include xs {
+        //     padding: 3rem 1rem !important;
+        // }
 
-        @include sm {
-            padding: 5rem !important;
-        }
+        // @include sm {
+        //     padding: 5rem !important;
+        // }
 
         p {
             letter-spacing: 0.1rem;
@@ -261,21 +173,21 @@
         grid-area: aside;
         background: var(--primary-light);
 
-        @include xs {
-            padding: 3rem 1rem !important;
-        }
+        // @include xs {
+        //     padding: 3rem 1rem !important;
+        // }
 
-        @include sm {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+        // @include sm {
+        //     display: flex;
+        //     flex-direction: column;
+        //     text-align: center;
+        // }
 
-        @include md {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+        // @include md {
+        //     display: flex;
+        //     flex-direction: column;
+        //     text-align: center;
+        // }
 
         .bar-skill {
             margin: 2rem 0;
@@ -283,13 +195,13 @@
             background: var(--primary-middle);
             position: relative;
 
-            @include sm {
-                margin: 2rem 10rem;
-            }
+            // @include sm {
+            //     margin: 2rem 10rem;
+            // }
 
-            @include md {
-                margin: 2rem 10rem;
-            }
+            // @include md {
+            //     margin: 2rem 10rem;
+            // }
 
             .bar-skill-progress {
                 position: absolute;
@@ -316,17 +228,17 @@
             display: flex;
             margin: 2rem 0 3rem 0;
 
-            @include xs {
-                justify-content: center;
-            }
+            // @include xs {
+            //     justify-content: center;
+            // }
 
-            @include sm {
-                justify-content: center;
-            }
+            // @include sm {
+            //     justify-content: center;
+            // }
 
-            @include md {
-                justify-content: center;
-            }
+            // @include md {
+            //     justify-content: center;
+            // }
 
             i {
                 font-size: 2rem;
@@ -340,9 +252,9 @@
             transition: all .3s;
             cursor: pointer;
 
-            @include xs {
-                text-align: center;
-            }
+            // @include xs {
+            //     text-align: center;
+            // }
 
             &:hover {
                 color: var(--secondary);
@@ -379,9 +291,9 @@
         align-items: center;
         background: var(--primary);
 
-        @include xs {
-            padding: 3rem 1rem !important;
-        }
+        // @include xs {
+        //     padding: 3rem 1rem !important;
+        // }
 
 
         .footer-title {
@@ -391,15 +303,15 @@
             text-transform: uppercase;
             color: var(--secondary);
 
-            @include xs {
-                font-size: 2rem;
-                text-align: center;
-            }
+            // @include xs {
+            //     font-size: 2rem;
+            //     text-align: center;
+            // }
 
-            @include sm {
-                font-size: 2.3rem;
-                text-align: center;
-            }
+            // @include sm {
+            //     font-size: 2.3rem;
+            //     text-align: center;
+            // }
         }
 
         .footer-subtitle {
@@ -407,9 +319,9 @@
             font-family: var(--font-cnew);
             font-size: 2rem;
 
-            @include xs {
-                font-size: 1.8rem;
-            }
+            // @include xs {
+            //     font-size: 1.8rem;
+            // }
         }
 
         form {
@@ -453,9 +365,9 @@
                 line-height: 2.2rem;
                 background: var(--primary-light);
 
-                @include xs {
-                    min-width: 200px;
-                }
+                // @include xs {
+                //     min-width: 200px;
+                // }
 
                 &::placeholder {
                     color: var(--primary-middle);

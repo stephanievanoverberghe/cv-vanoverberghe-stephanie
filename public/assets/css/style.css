@@ -369,41 +369,11 @@ img {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 500px) {
-  .cards {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .cards {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .cards {
-    flex-direction: column;
-  }
-}
 .cards .card {
   background: var(--primary-light);
   height: 40rem;
   max-width: 30rem;
   border-radius: 5px;
-}
-@media only screen and (max-width: 500px) {
-  .cards .card {
-    margin: 0 0 2rem 0 !important;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .cards .card {
-    margin: 0 0 2rem 0 !important;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .cards .card {
-    margin: 0 0 2rem 0 !important;
-  }
 }
 .cards .card .card-img-top {
   width: 100%;
@@ -414,7 +384,7 @@ img {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .cards .card .card-body .card-title {
@@ -428,15 +398,8 @@ img {
 .cards .card .card-body .card-text {
   text-align: justify;
 }
-@media only screen and (max-width: 500px) {
-  .cards .card .card-body .card-text {
-    padding-bottom: 1rem;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .cards .card .card-body .card-text {
-    padding-bottom: 1rem;
-  }
+.cards .card .card-body .btn {
+  margin-top: auto;
 }
 
 .btn {
@@ -455,43 +418,43 @@ img {
 
 .banner-title {
   color: var(--primary-light);
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: 1rem;
   font-weight: 700;
-  letter-spacing: 2.5rem;
   text-align: center;
   padding: 3rem 0;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 576px) {
   .banner-title {
-    font-size: 2.5rem;
-    line-height: 4rem;
-    letter-spacing: 1rem;
+    font-size: 4rem;
+    line-height: 6rem;
+    letter-spacing: 2.5rem;
   }
 }
 .banner-subtitle {
   color: var(--white);
-  letter-spacing: 0.5rem;
-  font-size: 2rem;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 576px) {
   .banner-subtitle {
+    letter-spacing: 0.5rem;
     font-size: 2rem;
-    letter-spacing: 0;
   }
 }
 .banner-text {
   color: var(--primary-light);
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 1rem;
+  text-align: justify;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 576px) {
   .banner-text {
-    padding: 2rem 1rem;
-    text-align: justify;
+    padding: 2rem;
+    text-align: center;
   }
 }
 
@@ -500,22 +463,6 @@ img {
   letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
-}
-@media only screen and (max-width: 500px) {
-  .section-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .section-title {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .section-title {
-    text-align: center;
-  }
 }
 .section-content {
   padding: 2.5rem 0 0 0;
@@ -529,12 +476,6 @@ img {
   text-transform: uppercase;
   color: var(--secondary);
 }
-@media only screen and (max-width: 500px) {
-  .text-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-}
 .text-subtitle {
   font-family: var(--font-cnew);
 }
@@ -544,22 +485,6 @@ img {
 .text-title-start {
   text-align: start;
 }
-@media only screen and (max-width: 500px) {
-  .text-md-content {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .text-md-content {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .text-md-content {
-    text-align: center;
-  }
-}
-
 .star-primary {
   color: var(--primary-dark);
 }
@@ -569,160 +494,73 @@ img {
 
 .grid-container {
   display: grid;
-  grid: "header header" auto "main aside" auto "footer footer" auto/auto;
+  grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 576px) {
   .grid-container {
-    grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container {
-    grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container {
-    grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
+    grid: "header header" auto "main aside" auto "footer footer" auto/auto;
   }
 }
 .grid-container header {
   grid-area: header;
   min-height: 100vh;
   display: grid;
-  grid: "nav" 12rem "banner" auto/auto;
+  grid: "nav" auto "banner" auto/auto;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 768px) {
   .grid-container header {
-    grid: "nav" auto "banner" auto/auto;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header {
-    grid: "nav" auto "banner" auto/auto;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container header {
-    grid: "nav" auto "banner" auto/auto;
+    grid: "nav" 12rem "banner" auto/auto;
   }
 }
 .grid-container header nav {
   grid-area: nav;
+  grid: "picture" auto "nav-items" auto/auto;
+  padding: 2rem 0;
   background: var(--primary);
-  display: grid;
+}
+@media only screen and (min-width: 768px) {
+  .grid-container header nav {
+    grid: "picture nav-items" auto/auto;
+    display: grid;
+    align-items: center;
+  }
+}
+.grid-container header nav .menu-burger {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  grid: "picture nav-items" auto/auto;
 }
-@media only screen and (max-width: 500px) {
-  .grid-container header nav {
-    grid: "picture" auto "nav-items" auto/auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav {
-    grid: "picture" auto "nav-items" auto/auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container header nav {
-    grid: "picture" auto "nav-items" auto/auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-  }
-}
-.grid-container header nav img {
+.grid-container header nav .menu-burger img {
   width: 10rem;
 }
-@media only screen and (max-width: 500px) {
-  .grid-container header nav img {
-    width: 7rem;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav img {
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container header nav img {
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-  }
+.grid-container header nav .menu-burger .icon-burger {
+  font-size: 5rem;
+  color: var(--secondary);
+  border: 1px solid var(--secondary-light);
+  padding: 0 2rem;
+  border-radius: 1rem;
 }
 .grid-container header nav ul {
   display: flex;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container header nav ul {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav ul {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 0 3rem 0;
 }
 .grid-container header nav ul li {
-  padding: 0 2rem;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container header nav ul li {
-    padding: 1rem 0;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav ul li {
-    padding: 1rem 0;
-  }
+  padding: 1rem 0;
 }
 .grid-container header nav ul li a {
   color: var(--secondary-light);
   font-weight: 700;
   transition: all 0.3s;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container header nav ul li a {
-    font-size: 1.8rem;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav ul li a {
-    font-size: 1.8rem;
-  }
+  font-size: 1.8rem;
 }
 .grid-container header nav ul li a:hover {
   color: var(--secondary);
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--secondary);
-}
-@media only screen and (max-width: 500px) {
-  .grid-container header nav ul li a:hover {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header nav ul li a:hover {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
 }
 .grid-container header .banner {
   grid-area: banner;
@@ -731,54 +569,20 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container header .banner {
-    padding: 3rem 0;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header .banner {
-    padding: 3rem 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container header .banner {
-    padding: 3rem 0;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .grid-container header .banner {
-    padding: 3rem 0;
-  }
+  padding: 3rem 0;
 }
 .grid-container header .banner img {
+  width: 20rem;
   border-radius: 50%;
-  border: 1rem solid var(--primary);
+  border: 0;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 576px) {
   .grid-container header .banner img {
-    width: 20rem;
-    border: 0;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container header .banner img {
-    width: 30rem;
+    border: 1rem solid var(--primary);
   }
 }
 .grid-container main {
   grid-area: main;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container main {
-    padding: 3rem 1rem !important;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container main {
-    padding: 5rem !important;
-  }
 }
 .grid-container main p {
   letter-spacing: 0.1rem;
@@ -806,40 +610,11 @@ img {
   grid-area: aside;
   background: var(--primary-light);
 }
-@media only screen and (max-width: 500px) {
-  .grid-container aside {
-    padding: 3rem 1rem !important;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container aside {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container aside {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-}
 .grid-container aside .bar-skill {
   margin: 2rem 0;
   height: 5px;
   background: var(--primary-middle);
   position: relative;
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container aside .bar-skill {
-    margin: 2rem 10rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container aside .bar-skill {
-    margin: 2rem 10rem;
-  }
 }
 .grid-container aside .bar-skill .bar-skill-progress {
   position: absolute;
@@ -862,21 +637,6 @@ img {
   display: flex;
   margin: 2rem 0 3rem 0;
 }
-@media only screen and (max-width: 500px) {
-  .grid-container aside .stars-container {
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container aside .stars-container {
-    justify-content: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .grid-container aside .stars-container {
-    justify-content: center;
-  }
-}
 .grid-container aside .stars-container i {
   font-size: 2rem;
   margin: 0 1rem;
@@ -885,11 +645,6 @@ img {
   color: var(--primary);
   transition: all 0.3s;
   cursor: pointer;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container aside a {
-    text-align: center;
-  }
 }
 .grid-container aside a:hover {
   color: var(--secondary);
@@ -915,11 +670,6 @@ img {
   align-items: center;
   background: var(--primary);
 }
-@media only screen and (max-width: 500px) {
-  .grid-container footer {
-    padding: 3rem 1rem !important;
-  }
-}
 .grid-container footer .footer-title {
   font-size: 3rem;
   letter-spacing: 0.5rem;
@@ -927,27 +677,10 @@ img {
   text-transform: uppercase;
   color: var(--secondary);
 }
-@media only screen and (max-width: 500px) {
-  .grid-container footer .footer-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 501px) and (max-width: 767px) {
-  .grid-container footer .footer-title {
-    font-size: 2.3rem;
-    text-align: center;
-  }
-}
 .grid-container footer .footer-subtitle {
   color: var(--secondary-light);
   font-family: var(--font-cnew);
   font-size: 2rem;
-}
-@media only screen and (max-width: 500px) {
-  .grid-container footer .footer-subtitle {
-    font-size: 1.8rem;
-  }
 }
 .grid-container footer form {
   display: flex;
@@ -985,11 +718,6 @@ img {
   padding: 1rem 2rem;
   line-height: 2.2rem;
   background: var(--primary-light);
-}
-@media only screen and (max-width: 500px) {
-  .grid-container footer form input {
-    min-width: 200px;
-  }
 }
 .grid-container footer form input::placeholder {
   color: var(--primary-middle);
