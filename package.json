@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass -w public/assets/scss:public/assets/css"
+    "sass": "sass -w public/assets/sass:public/assets/css"
   },
   "keywords": [],
   "author": "",
