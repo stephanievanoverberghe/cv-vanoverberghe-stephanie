@@ -510,7 +510,7 @@ img {
   display: grid;
   grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
   .grid-container {
     grid: "header header" auto "main aside" auto "footer footer" auto/auto;
   }
@@ -522,8 +522,8 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .grid-container header {
-    min-height: 100vh;
     grid: "nav" 12rem "banner" auto/auto;
+    min-height: 100vh;
   }
 }
 .grid-container header nav {
@@ -534,8 +534,8 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .grid-container header nav {
-    grid: "picture nav-items" auto/auto;
     display: grid;
+    grid: "picture nav-items" auto/auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,6 +549,7 @@ img {
 .grid-container header nav .menu-burger img {
   margin-right: 3rem;
   width: 10rem;
+  border-radius: 50%;
 }
 .grid-container header nav .menu-burger .icon-burger {
   font-size: 5rem;
@@ -601,21 +602,19 @@ img {
 .grid-container header .banner {
   grid-area: banner;
   background: var(--primary-middle);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
 }
-.grid-container header .banner img {
-  width: 20rem;
-  border-radius: 50%;
-  border: 0;
+.grid-container header .banner .slider .slider-items .slider-item {
+  display: none;
 }
-@media only screen and (min-width: 576px) {
-  .grid-container header .banner img {
-    border: 1rem solid var(--primary);
-  }
+.grid-container header .banner .slider .slider-items .slider-item img {
+  display: block;
+  width: 100%;
+}
+.grid-container header .banner .slider .slider-items .active {
+  display: block;
+}
+.grid-container header .banner .slider .slider-control-next-icon {
+  background-image: url(./../img/next.png);
 }
 .grid-container main {
   grid-area: main;

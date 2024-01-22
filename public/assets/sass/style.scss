@@ -7,14 +7,14 @@
 @use 'buttons';
 @use 'animations';
 @use 'media-queries' as *;
-@use 'classes';
+@use 'classes' as *;
 
 .grid-container {
     display: grid;
     grid:
         "header" auto "aside" auto "main" auto "footer" auto / auto;
 
-    @include sm {
+    @include md {
         grid:
             "header header" auto "main aside" auto "footer footer" auto / auto;
 
@@ -29,10 +29,11 @@
         grid:
             "nav" auto "banner" auto / auto;
 
+
         @include md {
-            min-height: 100vh;
             grid:
                 "nav" 12rem "banner" auto / auto;
+            min-height: 100vh;
         }
 
         nav {
@@ -43,9 +44,9 @@
             background: var(--primary);
 
             @include md {
+                display: grid;
                 grid:
                     "picture nav-items" auto / auto;
-                display: grid;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -59,6 +60,7 @@
                 img {
                     margin-right: 3rem;
                     width: 10rem;
+                    border-radius: 50%;
                 }
 
                 .icon-burger {
@@ -117,28 +119,29 @@
         .banner {
             grid-area: banner;
             background: var(--primary-middle);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 3rem 0;
 
-            @include sm {}
+            .slider {
+                .slider-items {
 
-            img {
-                width: 20rem;
-                border-radius: 50%;
-                border: 0;
 
-                @include sm {
-                    border: 1rem solid var(--primary);
+                    .slider-item {
+                        display: none;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .active {
+                        display: block;
+                    }
                 }
 
-                // @include sm {
-                //     width: 30rem;
-                // }
+                .slider-control-next-icon {
+                    background-image: url(./../img/next.png);
+                }
             }
-
 
         }
     }
