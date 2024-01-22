@@ -1,26 +1,40 @@
 :root {
-  --font-cnew: "Courier New",
+  --primary: #441151;
+  --primary-light: #f5edf7;
+  --primary-middle: #82568d;
+  --primary-dark: #1e0026;
+  --secondary: #f15025;
+  --secondary-light: #e9b8aa;
+  --secondary-dark: #290e06;
+  --white: #fff;
+  --light: #ddd;
+  --middle: #838383;
+  --dark: #333;
+}
+
+:root {
+  --font-cnew: "Courier-new",
   Courier,
   monospace;
-  --font-roboto-b: "Roboto bold",
+  --font-roboto-b: "Roboto-bold",
   sans-serif;
-  --font-roboto-r: "Roboto regular",
+  --font-roboto-r: "Roboto-regular",
   sans-serif;
-  --font-roboto-l: "Roboto light",
+  --font-roboto-l: "Roboto-light",
   sans-serif;
 }
 @font-face {
-  font-family: "Roboto bold";
+  font-family: "Roboto-bold";
   src: url(./../public/assets/fonts/Roboto-Bold.ttf) format("truetype");
   font-weight: 700;
 }
 @font-face {
-  font-family: "Roboto regular";
+  font-family: "Roboto-regular";
   src: url(./../public/assets/fonts/Roboto-Regular.ttf) format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Roboto light";
+  font-family: "Roboto-light";
   src: url(./../public/assets/fonts/Roboto-Light.ttf) format("truetype");
   font-weight: 300;
 }
@@ -522,6 +536,8 @@ img {
   .grid-container header nav {
     grid: "picture nav-items" auto/auto;
     display: grid;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -531,6 +547,7 @@ img {
   align-items: center;
 }
 .grid-container header nav .menu-burger img {
+  margin-right: 3rem;
   width: 10rem;
 }
 .grid-container header nav .menu-burger .icon-burger {
@@ -540,6 +557,11 @@ img {
   padding: 0 2rem;
   border-radius: 1rem;
 }
+@media only screen and (min-width: 768px) {
+  .grid-container header nav .menu-burger .icon-burger {
+    display: none;
+  }
+}
 .grid-container header nav ul {
   display: flex;
   flex-direction: column;
@@ -548,14 +570,27 @@ img {
   text-align: center;
   padding: 5rem 0 3rem 0;
 }
+@media only screen and (min-width: 768px) {
+  .grid-container header nav ul {
+    flex-direction: row;
+    padding: 0;
+  }
+}
 .grid-container header nav ul li {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .grid-container header nav ul li a {
   color: var(--secondary-light);
   font-weight: 700;
   transition: all 0.3s;
   font-size: 1.8rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .grid-container header nav ul li a {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+  }
 }
 .grid-container header nav ul li a:hover {
   color: var(--secondary);

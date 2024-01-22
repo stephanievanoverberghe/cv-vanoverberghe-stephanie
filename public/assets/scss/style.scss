@@ -1,4 +1,5 @@
-@use 'fonts';
+@use "variables" as *;
+@use 'fonts' as *;
 @use 'reset';
 @use 'base';
 @use 'utilities';
@@ -45,6 +46,8 @@
                 grid:
                     "picture nav-items" auto / auto;
                 display: grid;
+                display: flex;
+                justify-content: center;
                 align-items: center;
             }
 
@@ -54,6 +57,7 @@
                 align-items: center;
 
                 img {
+                    margin-right: 3rem;
                     width: 10rem;
                 }
 
@@ -63,9 +67,12 @@
                     border: 1px solid var(--secondary-light);
                     padding: 0 2rem;
                     border-radius: 1rem;
+
+                    @include md {
+                        display: none;
+                    }
                 }
             }
-
 
             ul {
                 display: flex;
@@ -75,14 +82,25 @@
                 text-align: center;
                 padding: 5rem 0 3rem 0;
 
+                @include md {
+                    flex-direction: row;
+                    padding: 0;
+                }
+
                 li {
-                    padding: 1rem 0;
+                    padding: 2rem 0;
 
                     a {
                         color: var(--secondary-light);
                         font-weight: 700;
                         transition: all .3s;
                         font-size: 1.8rem;
+                        cursor: pointer;
+
+                        @include md {
+                            padding: 0 2rem;
+                            font-size: 1.6rem;
+                        }
 
                         &:hover {
                             color: var(--secondary);
