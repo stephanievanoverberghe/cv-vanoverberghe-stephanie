@@ -25,12 +25,12 @@
 
     header {
         grid-area: header;
-        min-height: 100vh;
         display: grid;
         grid:
             "nav" auto "banner" auto / auto;
 
         @include md {
+            min-height: 100vh;
             grid:
                 "nav" 12rem "banner" auto / auto;
         }
@@ -76,13 +76,14 @@
 
             ul {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
                 padding: 5rem 0 3rem 0;
+                display: none;
 
                 @include md {
+                    display: flex;
                     flex-direction: row;
                     padding: 0;
                 }
@@ -104,6 +105,7 @@
 
                         &:hover {
                             color: var(--secondary);
+                            // background: var(--primary-light);
                             padding-bottom: 1rem;
                             border-bottom: 1px solid var(--secondary);
                         }

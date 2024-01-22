@@ -1,12 +1,22 @@
-let iconBurger = document.getElementById("icon-burger");
-console.log(iconBurger);
+const navItems = document.getElementById('nav-items');
+const navItem = document.querySelectorAll('.nav-item');
+console.log(navItem);
 
-// function menuBurger() {
-//     if (iconBurger.style.display === "block") {
-//         iconBurger.style.display = "none";
-//     } else {
-//         iconBurger.style.display = "block";
+// Menu burger
+// Open and disabled Menu
+
+iconBurger.addEventListener('click', () => {
+    if (navItems.style.display === "none") {
+        navItems.style.display = "block";
+    } else {
+        navItems.style.display = "none";
+    }
+});
+
+// Disabled Menu with nav-item
+
+// navItem.addEventListener('click', () => {
+//     if (navItems.style.display === "block") {
+//         navItems.style.display = "none";
 //     }
-// }
-
-// iconBurger.addEventListener("click", menuBurger)
+// });
