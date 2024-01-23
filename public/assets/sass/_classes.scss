@@ -1,6 +1,6 @@
 @use 'media-queries' as *;
 
-.banner {
+.slider {
     &-title {
         color: var(--primary-light);
         font-size: 2.5rem;
@@ -36,10 +36,10 @@
         padding: 2rem 1rem;
         text-align: justify;
 
-        @include sm {
-            padding: 2rem;
-            text-align: center;
-        }
+        // @include sm {
+        //     padding: 2rem;
+        //     text-align: center;
+        // }
     }
 }
 
@@ -97,20 +97,20 @@
         text-align: start;
     }
 
-    &-md-content {
+    // &-md-content {
 
-        // @include xs {
-        //     text-align: center;
-        // }
+    //     // @include xs {
+    //     //     text-align: center;
+    //     // }
 
-        // @include sm {
-        //     text-align: center;
-        // }
+    //     // @include sm {
+    //     //     text-align: center;
+    //     // }
 
-        // @include md {
-        //     text-align: center;
-        // }
-    }
+    //     // @include md {
+    //     //     text-align: center;
+    //     // }
+    // }
 }
 
 .star {
