@@ -15,7 +15,7 @@
     grid:
         "header" auto "aside" auto "main" auto "footer" auto / auto;
 
-    @include md {
+    @include lg {
         grid:
             "header header" auto "main aside" auto "footer footer" auto / auto;
 
@@ -34,6 +34,9 @@
         @include md {
             grid:
                 "nav" 12rem "banner" auto / auto;
+        }
+
+        @include lg {
             // min-height: 100vh;
         }
 
@@ -51,6 +54,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            @include lg {
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 5rem;
             }
 
             .menu-burger {
@@ -144,6 +153,7 @@ main {
         @include md {
             flex-direction: row;
             margin: 6rem 0;
+            padding-bottom: 2rem;
         }
 
         .timeline {
@@ -153,11 +163,12 @@ main {
             @include md {
                 text-align: center;
                 border-right: 1px solid var(--light);
-            }
+                border-bottom: none;
 
-            // p {
-            //     width: 100px;
-            // }
+                p {
+                    width: 100px;
+                }
+            }
         }
 
         .content {

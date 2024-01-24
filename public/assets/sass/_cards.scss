@@ -6,6 +6,12 @@
     justify-content: center;
     align-items: center;
 
+    @include md {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
     .card {
         background: var(--primary-light);
         height: 40rem;
@@ -27,6 +33,7 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            height: 26rem;
 
             .card-title {
                 letter-spacing: 0.3rem;

@@ -17,6 +17,12 @@
         }
     }
 
+    &-caption {
+        @include sm {
+            padding: 0 5rem;
+        }
+    }
+
     &-subtitle {
         color: var(--white);
         font-weight: 300;
@@ -39,6 +45,11 @@
         @include md {
             padding: 2rem 1rem;
             text-align: justify;
+        }
+
+        @include lg {
+            padding: 2rem 1rem;
+            text-align: center;
         }
     }
 }

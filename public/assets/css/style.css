@@ -384,6 +384,13 @@ img {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .cards .card {
   background: var(--primary-light);
   height: 40rem;
@@ -402,6 +409,7 @@ img {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: 26rem;
 }
 .cards .card .card-body .card-title {
   letter-spacing: 0.3rem;
@@ -487,6 +495,11 @@ img {
     letter-spacing: 2.5rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .slider-caption {
+    padding: 0 5rem;
+  }
+}
 .slider-subtitle {
   color: var(--white);
   font-weight: 300;
@@ -510,6 +523,12 @@ img {
   .slider-text {
     padding: 2rem 1rem;
     text-align: justify;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .slider-text {
+    padding: 2rem 1rem;
+    text-align: center;
   }
 }
 
@@ -562,7 +581,7 @@ img {
   display: grid;
   grid: "header" auto "aside" auto "main" auto "footer" auto/auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .grid-container {
     grid: "header header" auto "main aside" auto "footer footer" auto/auto;
   }
@@ -590,6 +609,13 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .grid-container header nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
   }
 }
 .grid-container header nav .menu-burger {
@@ -672,6 +698,7 @@ main .experience {
   main .experience {
     flex-direction: row;
     margin: 6rem 0;
+    padding-bottom: 2rem;
   }
 }
 main .experience .timeline {
@@ -682,6 +709,10 @@ main .experience .timeline {
   main .experience .timeline {
     text-align: center;
     border-right: 1px solid var(--light);
+    border-bottom: none;
+  }
+  main .experience .timeline p {
+    width: 100px;
   }
 }
 @media only screen and (min-width: 768px) {
