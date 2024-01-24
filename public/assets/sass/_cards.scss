@@ -2,40 +2,18 @@
 
 .cards {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    // @include xs {
-    //     flex-direction: column;
-    // }
-
-    // @include sm {
-    //     flex-direction: column;
-    // }
-
-    // @include lg {
-    //     flex-direction: column;
-    // }
-
-
 
     .card {
         background: var(--primary-light);
         height: 40rem;
         max-width: 30rem;
         border-radius: 5px;
+        margin: 0 0 2rem 0 !important;
 
-        // @include xs {
-        //     margin: 0 0 2rem 0 !important;
-        // }
-
-        // @include sm {
-        //     margin: 0 0 2rem 0 !important;
-        // }
-
-        // @include lg {
-        //     margin: 0 0 2rem 0 !important;
-        // }
+        @include md {}
 
         .card-img-top {
             width: 100%;

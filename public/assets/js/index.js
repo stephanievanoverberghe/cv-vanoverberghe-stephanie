@@ -20,3 +20,6 @@ navItems.addEventListener('click', () => {
         navItems.style.display = "none";
     }
 });
+
+
+// carousel

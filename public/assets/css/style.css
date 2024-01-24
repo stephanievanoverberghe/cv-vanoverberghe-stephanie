@@ -380,6 +380,7 @@ img {
 
 .cards {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -388,6 +389,7 @@ img {
   height: 40rem;
   max-width: 30rem;
   border-radius: 5px;
+  margin: 0 0 2rem 0 !important;
 }
 .cards .card .card-img-top {
   width: 100%;
@@ -471,7 +473,7 @@ img {
 
 .slider-title {
   color: var(--primary-light);
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 4rem;
   letter-spacing: 1rem;
   font-weight: 700;
@@ -500,16 +502,28 @@ img {
   }
 }
 .slider-text {
+  padding: 2rem;
   color: var(--primary-light);
-  padding: 2rem 1rem;
-  text-align: justify;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .slider-text {
+    padding: 2rem 1rem;
+    text-align: justify;
+  }
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
 }
 .section-content {
   padding: 2.5rem 0 0 0;
@@ -517,8 +531,9 @@ img {
 }
 
 .text-title {
-  letter-spacing: 0.3rem;
   font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--secondary);
@@ -528,6 +543,9 @@ img {
 }
 .text-content {
   text-align: justify;
+}
+.text-center {
+  text-align: center;
 }
 .text-title-start {
   text-align: start;
@@ -639,6 +657,7 @@ img {
 
 main {
   grid-area: main;
+  padding: 5rem 2rem;
 }
 main p {
   letter-spacing: 0.1rem;
@@ -646,18 +665,29 @@ main p {
 }
 main .experience {
   display: flex;
-  margin: 6rem 0;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  main .experience {
+    flex-direction: row;
+    margin: 6rem 0;
+  }
 }
 main .experience .timeline {
-  text-align: center;
   color: var(--primary-dark);
-  border-right: 1px solid var(--light);
+  border-bottom: 1px solid var(--light);
 }
-main .experience .timeline p {
-  width: 100px;
+@media only screen and (min-width: 768px) {
+  main .experience .timeline {
+    text-align: center;
+    border-right: 1px solid var(--light);
+  }
 }
-main .experience .content {
-  padding: 0 1rem;
+@media only screen and (min-width: 768px) {
+  main .experience .content {
+    padding: 0 1rem;
+  }
 }
 main .experience .content ul {
   list-style: circle;
@@ -693,6 +723,7 @@ aside .bar-skill .bar-skill-dot {
 aside .stars-container {
   display: flex;
   margin: 2rem 0 3rem 0;
+  justify-content: center;
 }
 aside .stars-container i {
   font-size: 2rem;
@@ -702,6 +733,7 @@ aside a {
   color: var(--primary);
   transition: all 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 aside a:hover {
   color: var(--secondary);
@@ -727,18 +759,31 @@ footer {
   justify-content: center;
   align-items: center;
   background: var(--primary);
+  padding: 3rem 1rem !important;
 }
 footer .footer-title {
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--secondary);
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  footer .footer-title {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 footer .footer-subtitle {
   color: var(--secondary-light);
   font-family: var(--font-cnew);
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+@media only screen and (min-width: 768px) {
+  footer .footer-subtitle {
+    font-size: 2rem;
+  }
 }
 footer form {
   display: flex;
@@ -772,10 +817,15 @@ footer form button .postfix:hover {
 footer form input {
   outline: 0;
   border: 0;
-  min-width: 400px;
+  min-width: 200px;
   padding: 1rem 2rem;
   line-height: 2.2rem;
   background: var(--primary-light);
+}
+@media only screen and (min-width: 768px) {
+  footer form input {
+    min-width: 400px;
+  }
 }
 footer form input::placeholder {
   color: var(--primary-middle);

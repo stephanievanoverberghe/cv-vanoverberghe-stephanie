@@ -129,14 +129,7 @@
 
 main {
     grid-area: main;
-
-    // @include xs {
-    //     padding: 3rem 1rem !important;
-    // }
-
-    // @include sm {
-    //     padding: 5rem !important;
-    // }
+    padding: 5rem 2rem;
 
     p {
         letter-spacing: 0.1rem;
@@ -145,20 +138,34 @@ main {
 
     .experience {
         display: flex;
-        margin: 6rem 0;
+        flex-direction: column;
+        padding-bottom: 5rem;
+
+        @include md {
+            flex-direction: row;
+            margin: 6rem 0;
+        }
 
         .timeline {
-            text-align: center;
             color: var(--primary-dark);
-            border-right: 1px solid var(--light);
+            border-bottom: 1px solid var(--light);
 
-            p {
-                width: 100px;
+            @include md {
+                text-align: center;
+                border-right: 1px solid var(--light);
             }
+
+            // p {
+            //     width: 100px;
+            // }
         }
 
         .content {
-            padding: 0 1rem;
+
+
+            @include md {
+                padding: 0 1rem;
+            }
 
             ul {
                 list-style: circle;
@@ -174,35 +181,11 @@ aside {
     grid-area: aside;
     background: var(--primary-light);
 
-    // @include xs {
-    //     padding: 3rem 1rem !important;
-    // }
-
-    // @include sm {
-    //     display: flex;
-    //     flex-direction: column;
-    //     text-align: center;
-    // }
-
-    // @include md {
-    //     display: flex;
-    //     flex-direction: column;
-    //     text-align: center;
-    // }
-
     .bar-skill {
         margin: 2rem 0;
         height: 5px;
         background: var(--primary-middle);
         position: relative;
-
-        // @include sm {
-        //     margin: 2rem 10rem;
-        // }
-
-        // @include md {
-        //     margin: 2rem 10rem;
-        // }
 
         .bar-skill-progress {
             position: absolute;
@@ -228,18 +211,7 @@ aside {
     .stars-container {
         display: flex;
         margin: 2rem 0 3rem 0;
-
-        // @include xs {
-        //     justify-content: center;
-        // }
-
-        // @include sm {
-        //     justify-content: center;
-        // }
-
-        // @include md {
-        //     justify-content: center;
-        // }
+        justify-content: center;
 
         i {
             font-size: 2rem;
@@ -252,10 +224,7 @@ aside {
         color: var(--primary);
         transition: all .3s;
         cursor: pointer;
-
-        // @include xs {
-        //     text-align: center;
-        // }
+        text-align: center;
 
         &:hover {
             color: var(--secondary);
@@ -291,38 +260,30 @@ footer {
     justify-content: center;
     align-items: center;
     background: var(--primary);
-
-    // @include xs {
-    //     padding: 3rem 1rem !important;
-    // }
-
+    padding: 3rem 1rem !important;
 
     .footer-title {
-        font-size: 3rem;
+        font-size: 2rem;
         letter-spacing: 0.5rem;
         font-weight: 700;
         text-transform: uppercase;
         color: var(--secondary);
+        text-align: center;
 
-        // @include xs {
-        //     font-size: 2rem;
-        //     text-align: center;
-        // }
-
-        // @include sm {
-        //     font-size: 2.3rem;
-        //     text-align: center;
-        // }
+        @include md {
+            font-size: 3rem;
+            text-align: center;
+        }
     }
 
     .footer-subtitle {
         color: var(--secondary-light);
         font-family: var(--font-cnew);
-        font-size: 2rem;
+        font-size: 1.8rem;
 
-        // @include xs {
-        //     font-size: 1.8rem;
-        // }
+        @include md {
+            font-size: 2rem;
+        }
     }
 
     form {
@@ -361,14 +322,14 @@ footer {
         input {
             outline: 0;
             border: 0;
-            min-width: 400px;
+            min-width: 200px;
             padding: 1rem 2rem;
             line-height: 2.2rem;
             background: var(--primary-light);
 
-            // @include xs {
-            //     min-width: 200px;
-            // }
+            @include md {
+                min-width: 400px;
+            }
 
             &::placeholder {
                 color: var(--primary-middle);

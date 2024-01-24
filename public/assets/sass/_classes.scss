@@ -3,7 +3,7 @@
 .slider {
     &-title {
         color: var(--primary-light);
-        font-size: 2.5rem;
+        font-size: 3rem;
         line-height: 4rem;
         letter-spacing: 1rem;
         font-weight: 700;
@@ -32,36 +32,28 @@
     }
 
     &-text {
+        padding: 2rem;
         color: var(--primary-light);
-        padding: 2rem 1rem;
-        text-align: justify;
+        text-align: center;
 
-        // @include sm {
-        //     padding: 2rem;
-        //     text-align: center;
-        // }
+        @include md {
+            padding: 2rem 1rem;
+            text-align: justify;
+        }
     }
 }
 
 .section {
     &-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 0.5rem;
         font-weight: 700;
         text-transform: uppercase;
+        text-align: center;
 
-        // @include xs {
-        //     font-size: 2.2rem;
-        //     text-align: center;
-        // }
-
-        // @include sm {
-        //     text-align: center;
-        // }
-
-        // @include md {
-        //     text-align: center;
-        // }
+        @include md {
+            font-size: 3rem;
+        }
     }
 
     &-content {
@@ -72,16 +64,14 @@
 
 .text {
     &-title {
-        letter-spacing: 0.3rem;
         font-size: 1.8rem;
+        text-align: center;
+        letter-spacing: 0.3rem;
         font-weight: 700;
         text-transform: uppercase;
         color: var(--secondary);
 
-        // @include xs {
-        //     font-size: 1.8rem;
-        //     text-align: center;
-        // }
+        @include md {}
     }
 
     &-subtitle {
@@ -90,27 +80,15 @@
 
     &-content {
         text-align: justify;
+    }
 
+    &-center {
+        text-align: center;
     }
 
     &-title-start {
         text-align: start;
     }
-
-    // &-md-content {
-
-    //     // @include xs {
-    //     //     text-align: center;
-    //     // }
-
-    //     // @include sm {
-    //     //     text-align: center;
-    //     // }
-
-    //     // @include md {
-    //     //     text-align: center;
-    //     // }
-    // }
 }
 
 .star {
