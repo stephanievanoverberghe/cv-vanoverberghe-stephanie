@@ -726,6 +726,7 @@ main .experience .content ul {
 
 aside {
   grid-area: aside;
+  width: 50rem;
   background: var(--primary-light);
 }
 aside .bar-skill {
