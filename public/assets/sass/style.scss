@@ -24,6 +24,10 @@
     // *********************************************************************************
     // Header
 
+    // .grid-container {
+    //     
+    // }
+
     header {
         grid-area: header;
         display: grid;
@@ -34,10 +38,6 @@
         @include md {
             grid:
                 "nav" 12rem "banner" auto / auto;
-        }
-
-        @include lg {
-            // min-height: 100vh;
         }
 
         nav {
