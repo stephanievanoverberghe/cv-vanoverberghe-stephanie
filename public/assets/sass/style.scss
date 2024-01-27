@@ -22,11 +22,7 @@
     }
 
     // *********************************************************************************
-    // Header
-
-    // .grid-container {
-    //     
-    // }
+    // HEADER
 
     header {
         grid-area: header;
@@ -375,6 +371,16 @@ footer {
         @include md {
             font-size: 2rem;
         }
+    }
+
+    .send-message {
+        color: var(--light);
+        cursor: pointer;
+        transition: color .3s;
+    }
+
+    .send-message:hover {
+        color: var(--secondary);
     }
 
     form {

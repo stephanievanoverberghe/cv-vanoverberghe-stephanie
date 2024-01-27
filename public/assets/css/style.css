@@ -873,6 +873,14 @@ footer .footer-subtitle {
     font-size: 2rem;
   }
 }
+footer .send-message {
+  color: var(--light);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+footer .send-message:hover {
+  color: var(--secondary);
+}
 footer form {
   display: flex;
   align-items: center;
