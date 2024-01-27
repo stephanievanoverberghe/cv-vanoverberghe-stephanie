@@ -867,6 +867,7 @@ footer .footer-subtitle {
   color: var(--secondary-light);
   font-family: var(--font-cnew);
   font-size: 1.8rem;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   footer .footer-subtitle {

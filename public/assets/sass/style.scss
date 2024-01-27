@@ -367,6 +367,7 @@ footer {
         color: var(--secondary-light);
         font-family: var(--font-cnew);
         font-size: 1.8rem;
+        text-align: center;
 
         @include md {
             font-size: 2rem;
