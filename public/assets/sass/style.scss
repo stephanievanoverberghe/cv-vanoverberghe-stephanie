@@ -375,6 +375,8 @@ footer {
 
     .send-message {
         color: var(--light);
+        font-weight: 700;
+        text-transform: uppercase;
         cursor: pointer;
         transition: color .3s;
     }
