@@ -6,7 +6,10 @@
 4 - Afficher les slides une à une à l'aide d'une boucle
 */
 
-const slider = [
+const sliderItems = document.querySelector('.slider-items');
+console.log(sliderItems);
+
+const sliders = [
     {
         id: 1,
         title: "Vanoverberghe Stéphanie",
@@ -31,9 +34,36 @@ const slider = [
         description: "Découvrez mon parcours à travers mes projets clés, qui mettent en lumière mon utilisation pratique de JavaScript, SASS, PHP, et SQL, de la conception à la création.",
         visibility: false
     },
-]
+];
 
-console.log(slider);
+const displaySlider = () => {
+    const slidersNode = sliders.map((slider) => {
+        return createSliderElement(slider);
+    });
+    sliderItems.innerHTML = '';
+    sliderItems.append(...slidersNode);
+};
+
+const createSliderElement = slider => {
+    const sliderItem = document.createElement('div');
+    sliderItem.innerHTML = `
+        <img src="${slider.image}" alt="Image décorative">
+        <div class="slider-caption">
+            <h1 class="slider-title"><span>${slider.title}</span></h1>
+            <h2 class="slider-subtitle">${slider.subtitle}</h2>
+            <p class="slider-text">${slider.description}</p>
+        </div>
+        <div class="slider-buttons pt-5 pb-2">
+            <button class="slider-button btn-1 active"></button>
+            <button class="slider-button btn-2"></button>
+            <button class="slider-button btn-3"></button>
+        </div>
+    `
+    return sliderItem;
+};
+
+displaySlider();
+
 
 
 // const carousel = () => {
