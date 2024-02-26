@@ -36,20 +36,20 @@ const sliders = [
     },
 ];
 
-const displaySlider = () => {
-    const slidersNode = sliders.map((slider) => {
-        return createSliderElement(slider);
-    });
-    sliderItems.innerHTML = '';
-    sliderItems.append(...slidersNode);
+let currentIndex = 0;
 
-    let currentIndex = 0;
+const displaySlider = () => {
+    sliderItems.innerHTML = '';
     const sliderElement = createSliderElement(sliders[currentIndex]);
-    sliderElement.appendChild(sliderElement);
+    sliderElement.classList.add('active');
+    sliderItems.appendChild(sliderElement);
+
+    updateButton();
 };
 
 const createSliderElement = slider => {
     const sliderItem = document.createElement('div');
+    sliderItem.classList.add('slider-item');
     sliderItem.innerHTML = `
         <img src="${slider.image}" alt="Image décorative">
         <div class="slider-caption">
@@ -62,11 +62,28 @@ const createSliderElement = slider => {
             <button class="slider-button btn-2"></button>
             <button class="slider-button btn-3"></button>
         </div>
-    `
+    `;
+
     return sliderItem;
 };
 
+const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % sliders.length;
+    displaySlider();
+}
+
+const updateButton = () => {
+    document.querySelectorAll('.slider-button').forEach(button => {
+        button.classList.remove('active');
+    });
+    const activeButton = document.querySelector(`.btn-${currentIndex + 1}`);
+    if (activeButton) {
+        activeButton.classList.add('active');
+    };
+};
+
 displaySlider();
+setInterval(nextSlide, 7000);
 
 
 
