@@ -42,6 +42,10 @@ const displaySlider = () => {
     });
     sliderItems.innerHTML = '';
     sliderItems.append(...slidersNode);
+
+    let currentIndex = 0;
+    const sliderElement = createSliderElement(sliders[currentIndex]);
+    sliderElement.appendChild(sliderElement);
 };
 
 const createSliderElement = slider => {
