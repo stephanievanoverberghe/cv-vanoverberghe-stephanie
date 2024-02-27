@@ -1,15 +1,12 @@
 :root {
-  --primary: #441151;
-  --primary-light: #f5edf7;
-  --primary-middle: #82568d;
-  --primary-dark: #1e0026;
-  --secondary: #f15025;
-  --secondary-light: #e9b8aa;
-  --secondary-dark: #290e06;
+  --primary: #0084ff;
+  --primary-light: #edf6ff;
+  --primary-middle: #1763a9;
+  --primary-dark: #00152a;
+  --secondary: #898989;
+  --secondary-light: #eeeeee;
+  --secondary-dark: #191919;
   --white: #fff;
-  --light: #ddd;
-  --middle: #838383;
-  --dark: #333;
 }
 
 :root {
@@ -60,7 +57,7 @@ html {
 body {
   font-family: var(--font-roboto-r);
   font-size: 1.6rem;
-  color: var(--dark);
+  color: var(--secondary-dark);
 }
 
 h1,
@@ -416,7 +413,7 @@ img {
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--secondary-dark);
   text-align: center;
 }
 .cards .card .card-body .card-text {
@@ -436,7 +433,7 @@ img {
   transition: all 0.3s;
 }
 .btn:hover {
-  background: var(--secondary);
+  background: var(--secondary-dark);
   color: var(--white);
 }
 
@@ -458,6 +455,11 @@ img {
   position: relative;
   z-index: 1;
 }
+.slider .slider-items .slider-item .slider-caption .slider-subtitle {
+  background: var(--primary);
+  color: var(--secondary-light);
+  padding: 1rem;
+}
 .slider .slider-items .active {
   display: block;
 }
@@ -476,7 +478,7 @@ img {
   margin: 0 2rem 0 0;
 }
 .slider .slider-items .slider-buttons .active {
-  border-color: var(--middle);
+  border-color: var(--secondary-dark);
 }
 
 .slider-title {
@@ -555,7 +557,7 @@ img {
   letter-spacing: 0.3rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--secondary-dark);
 }
 .text-subtitle {
   font-family: var(--font-cnew);
@@ -672,9 +674,9 @@ img {
   }
 }
 .grid-container header nav ul li a:hover {
-  color: var(--secondary);
+  color: var(--secondary-dark);
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary-dark);
 }
 .grid-container header .slider {
   grid-area: banner;
@@ -703,12 +705,12 @@ main .experience {
 }
 main .experience .timeline {
   color: var(--primary-dark);
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--secondary-light);
 }
 @media only screen and (min-width: 768px) {
   main .experience .timeline {
     text-align: center;
-    border-right: 1px solid var(--light);
+    border-right: 1px solid var(--secondary-light);
     border-bottom: none;
   }
   main .experience .timeline p {
@@ -824,7 +826,7 @@ aside a {
   text-align: center;
 }
 aside a:hover {
-  color: var(--secondary);
+  color: var(--secondary-light);
 }
 aside a .social-container {
   display: block;
@@ -854,7 +856,7 @@ footer .footer-title {
   letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--secondary-dark);
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -875,14 +877,14 @@ footer .footer-subtitle {
   }
 }
 footer .send-message {
-  color: var(--light);
+  color: var(--secondary-light);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s;
 }
 footer .send-message:hover {
-  color: var(--secondary);
+  color: var(--secondary-dark);
 }
 footer form {
   display: flex;

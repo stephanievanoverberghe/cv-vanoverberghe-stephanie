@@ -112,10 +112,9 @@
                         }
 
                         &:hover {
-                            color: var(--secondary);
-                            // background: var(--primary-light);
+                            color: var(--secondary-dark);
                             padding-bottom: 1rem;
-                            border-bottom: 1px solid var(--secondary);
+                            border-bottom: 1px solid var(--secondary-dark);
                         }
                     }
                 }
@@ -154,11 +153,11 @@ main {
 
         .timeline {
             color: var(--primary-dark);
-            border-bottom: 1px solid var(--light);
+            border-bottom: 1px solid var(--secondary-light);
 
             @include md {
                 text-align: center;
-                border-right: 1px solid var(--light);
+                border-right: 1px solid var(--secondary-light);
                 border-bottom: none;
 
                 p {
@@ -314,7 +313,7 @@ aside {
         text-align: center;
 
         &:hover {
-            color: var(--secondary);
+            color: var(--secondary-light);
         }
 
         .social-container {
@@ -354,7 +353,7 @@ footer {
         letter-spacing: 0.5rem;
         font-weight: 700;
         text-transform: uppercase;
-        color: var(--secondary);
+        color: var(--secondary-dark);
         text-align: center;
 
         @include md {
@@ -375,7 +374,7 @@ footer {
     }
 
     .send-message {
-        color: var(--light);
+        color: var(--secondary-light);
         font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
@@ -383,7 +382,7 @@ footer {
     }
 
     .send-message:hover {
-        color: var(--secondary);
+        color: var(--secondary-dark);
     }
 
     form {

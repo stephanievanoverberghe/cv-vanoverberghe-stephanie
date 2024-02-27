@@ -20,6 +20,12 @@
             .slider-caption {
                 position: relative;
                 z-index: 1;
+
+                .slider-subtitle {
+                    background: var(--primary);
+                    color: var(--secondary-light);
+                    padding: 1rem;
+                }
             }
         }
 
@@ -44,7 +50,7 @@
             }
 
             .active {
-                border-color: var(--middle);
+                border-color: var(--secondary-dark);
             }
         }
     }
