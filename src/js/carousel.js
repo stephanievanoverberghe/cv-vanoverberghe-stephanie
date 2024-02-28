@@ -19,14 +19,14 @@ const sliders = [
     {
         id: 2,
         title: "Compétences techniques",
-        image: './..src/img/slide-02.jpg',
+        image: './../src/img/slide-02.jpg',
         subtitle: "SASS - JS - PHP - SQL",
         description: "Actuellement concentrée sur l'approfondissement de mes compétences en JavaScript, je complète ma technique avec une exploration continue de SASS, PHP, et SQL."
     },
     {
         id: 3,
         title: "Projets et réalisations",
-        image: './..src/img/slide-03.jpg',
+        image: './../src/img/slide-03.jpg',
         subtitle: "Projets en JS et autres tech",
         description: "Découvrez mon parcours à travers mes projets clés, qui mettent en lumière mon utilisation pratique de JavaScript, SASS, PHP, et SQL, de la conception à la création."
     },
