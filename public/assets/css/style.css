@@ -456,7 +456,7 @@ img {
   z-index: 1;
 }
 .slider .slider-items .slider-item .slider-caption .slider-subtitle {
-  background: var(--primary);
+  background-color: rgba(0, 132, 255, 0.5);
   color: var(--secondary-light);
   padding: 1rem;
 }
@@ -632,7 +632,7 @@ img {
 }
 .grid-container header nav .menu-burger .icon-burger {
   font-size: 5rem;
-  color: var(--secondary);
+  color: var(--secondary-dark);
   border: 1px solid var(--secondary-light);
   padding: 0 2rem;
   border-radius: 1rem;
@@ -766,13 +766,13 @@ aside .bar-skill .progress-bootstrap {
   width: 80%;
 }
 aside .bar-skill .progress-javascript {
-  width: 30%;
+  width: 60%;
 }
 aside .bar-skill .progress-php {
-  width: 40%;
+  width: 30%;
 }
 aside .bar-skill .progress-sql {
-  width: 40%;
+  width: 30%;
 }
 aside .bar-skill .progress-wp {
   width: 70%;
@@ -793,13 +793,13 @@ aside .bar-skill .dot-bootstrap {
   left: calc(80% - 5px);
 }
 aside .bar-skill .dot-javascript {
-  left: calc(30% - 5px);
+  left: calc(60% - 5px);
 }
 aside .bar-skill .dot-php {
-  left: calc(40% - 5px);
+  left: calc(30% - 5px);
 }
 aside .bar-skill .dot-sql {
-  left: calc(40% - 5px);
+  left: calc(30% - 5px);
 }
 aside .bar-skill .dot-wp {
   left: calc(70% - 5px);
@@ -820,8 +820,7 @@ aside .stars-container i {
   margin: 0 1rem;
 }
 aside a {
-  color: var(--primary);
-  transition: all 0.3s;
+  color: var(--primary-dark);
   cursor: pointer;
   text-align: center;
 }

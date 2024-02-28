@@ -71,7 +71,7 @@
 
                 .icon-burger {
                     font-size: 5rem;
-                    color: var(--secondary);
+                    color: var(--secondary-dark);
                     border: 1px solid var(--secondary-light);
                     padding: 0 2rem;
                     border-radius: 1rem;
@@ -230,15 +230,15 @@ aside {
         }
 
         .progress-javascript {
-            width: 30%;
+            width: 60%;
         }
 
         .progress-php {
-            width: 40%;
+            width: 30%;
         }
 
         .progress-sql {
-            width: 40%;
+            width: 30%;
         }
 
         .progress-wp {
@@ -266,15 +266,15 @@ aside {
         }
 
         .dot-javascript {
-            left: calc(30% - 5px);
+            left: calc(60% - 5px);
         }
 
         .dot-php {
-            left: calc(40% - 5px);
+            left: calc(30% - 5px);
         }
 
         .dot-sql {
-            left: calc(40% - 5px);
+            left: calc(30% - 5px);
         }
 
         .dot-wp {
@@ -307,8 +307,7 @@ aside {
     // SOCIAL
 
     a {
-        color: var(--primary);
-        transition: all .3s;
+        color: var(--primary-dark);
         cursor: pointer;
         text-align: center;
 
