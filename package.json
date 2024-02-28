@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass -w public/assets/sass:public/assets/css"
+    "sass": "sass -w src/sass:src/css",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +14,8 @@
   "dependencies": {
     "sass": "^1.70.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "vite": "^5.1.4"
+  }
 }
