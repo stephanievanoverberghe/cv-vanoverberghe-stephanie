@@ -2,6 +2,7 @@
   "name": "cv_numerique",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass": "sass -w src/sass:src/css",
     "start": "vite",
