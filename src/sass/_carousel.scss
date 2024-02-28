@@ -40,7 +40,7 @@
             z-index: 2;
 
             .slider-button {
-                border: 2px solid var(--white);
+                border: 2px solid var(--background-dark-menu);
                 padding: 0 2rem;
             }
 
@@ -50,7 +50,7 @@
             }
 
             .active {
-                border-color: var(--secondary-dark);
+                border-color: var(--primary);
             }
         }
     }

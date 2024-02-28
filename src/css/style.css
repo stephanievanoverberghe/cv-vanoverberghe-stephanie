@@ -479,7 +479,7 @@ img {
   z-index: 2;
 }
 .slider .slider-items .slider-buttons .slider-button {
-  border: 2px solid var(--white);
+  border: 2px solid var(--background-dark-menu);
   padding: 0 2rem;
 }
 .slider .slider-items .slider-buttons .slider-button:first-child,
@@ -487,7 +487,7 @@ img {
   margin: 0 2rem 0 0;
 }
 .slider .slider-items .slider-buttons .active {
-  border-color: var(--secondary-dark);
+  border-color: var(--primary);
 }
 
 .slider-title {
