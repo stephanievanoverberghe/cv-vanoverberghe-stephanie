@@ -13,7 +13,7 @@
     }
 
     .card {
-        background: var(--primary-light);
+        background: var(--background-dark-aside);
         height: 40rem;
         max-width: 30rem;
         border-radius: 5px;
@@ -40,20 +40,18 @@
                 font-size: 1.8rem;
                 font-weight: 700;
                 text-transform: uppercase;
-                color: var(--secondary-dark);
+                color: var(--primary);
                 text-align: center;
             }
 
             .card-text {
                 text-align: justify;
+                color: var(--primary-light);
+                transition: all .3s;
 
-                // @include xs {
-                //     padding-bottom: 1rem;
-                // }
-
-                // @include sm {
-                //     padding-bottom: 1rem;
-                // }
+                &:hover {
+                    color: var(--primary);
+                }
             }
 
             .btn {

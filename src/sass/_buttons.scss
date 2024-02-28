@@ -1,14 +1,15 @@
 .btn {
     border: none;
     background: var(--primary);
-    color: var(--primary-light);
+    color: var(--background-dark-menu);
+    font-weight: bold;
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     transition: all .3s;
 
     &:hover {
-        background: var(--secondary-dark);
-        color: var(--white);
+        background: var(--primary-middle);
+        color: var(--primary-light);
     }
 }

@@ -41,7 +41,7 @@
             grid:
                 "picture" auto "nav-items" auto /auto;
             padding: 2rem 0;
-            background: var(--primary);
+            background: var(--background-dark-menu);
 
             @include md {
                 display: grid;
@@ -71,8 +71,8 @@
 
                 .icon-burger {
                     font-size: 5rem;
-                    color: var(--secondary-dark);
-                    border: 1px solid var(--secondary-light);
+                    color: var(--primary);
+                    border: 1px solid var(--primary);
                     padding: 0 2rem;
                     border-radius: 1rem;
 
@@ -100,7 +100,7 @@
                     padding: 2rem 0;
 
                     a {
-                        color: var(--secondary-light);
+                        color: var(--primary-light);
                         font-weight: 700;
                         transition: all .3s;
                         font-size: 1.8rem;
@@ -112,9 +112,9 @@
                         }
 
                         &:hover {
-                            color: var(--secondary-dark);
+                            color: var(--primary);
                             padding-bottom: 1rem;
-                            border-bottom: 1px solid var(--secondary-dark);
+                            border-bottom: 1px solid var(--primary);
                         }
                     }
                 }
@@ -123,7 +123,7 @@
 
         .slider {
             grid-area: banner;
-            background: var(--primary-middle);
+            background: var(--background-dark-menu);
         }
     }
 }
@@ -152,12 +152,12 @@ main {
         }
 
         .timeline {
-            color: var(--primary-dark);
-            border-bottom: 1px solid var(--secondary-light);
+            color: var(--primary-light);
+            border-bottom: 1px solid var(--primary);
 
             @include md {
                 text-align: center;
-                border-right: 1px solid var(--secondary-light);
+                border-right: 1px solid var(--primary);
                 border-bottom: none;
 
                 p {
@@ -185,7 +185,7 @@ main {
 
 aside {
     grid-area: aside;
-    background: var(--primary-light);
+    background: var(--background-dark-aside);
 
     @include lg {
         width: 50rem;
@@ -196,7 +196,7 @@ aside {
     .bar-skill {
         margin: 2rem 0;
         height: 5px;
-        background: var(--primary-middle);
+        background: var(--secondary-light);
         position: relative;
 
         .bar-skill-progress {
@@ -204,14 +204,14 @@ aside {
             height: 5px;
             top: 0;
             left: 0;
-            background: var(--primary-dark);
+            background: var(--secondary);
         }
 
         .bar-skill-dot {
             position: absolute;
             height: 10px;
             width: 10px;
-            background: var(--secondary);
+            background: var(--secondary-dark);
             top: -2.5px;
             border-radius: 50%;
             // transform: rotate(45deg);
@@ -307,12 +307,13 @@ aside {
     // SOCIAL
 
     a {
-        color: var(--primary-dark);
+        color: var(--primary-light);
         cursor: pointer;
         text-align: center;
 
         &:hover {
-            color: var(--secondary-light);
+            color: var(--primary-dark);
+            font-weight: bold;
         }
 
         .social-container {
@@ -344,15 +345,16 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--primary);
+    background: var(--background-dark-menu);
     padding: 3rem 1rem !important;
+    border-top: 1px solid var(--primary);
 
     .footer-title {
         font-size: 2rem;
         letter-spacing: 0.5rem;
         font-weight: 700;
         text-transform: uppercase;
-        color: var(--secondary-dark);
+        color: var(--primary-light);
         text-align: center;
 
         @include md {
@@ -362,7 +364,7 @@ footer {
     }
 
     .footer-subtitle {
-        color: var(--secondary-light);
+        color: var(--primary-light);
         font-family: var(--font-cnew);
         font-size: 1.8rem;
         text-align: center;
@@ -373,7 +375,7 @@ footer {
     }
 
     .send-message {
-        color: var(--secondary-light);
+        color: var(--primary);
         font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
@@ -381,59 +383,6 @@ footer {
     }
 
     .send-message:hover {
-        color: var(--secondary-dark);
+        color: var(--primary-light);
     }
-
-    form {
-        display: flex;
-        align-items: center;
-
-        .prefix {
-            background: linear-gradient(to right, var(--primary), var(--primary-light));
-            padding: 1rem 2rem;
-            color: white;
-            font-size: 1.8rem;
-            border-top-left-radius: 0.5rem;
-            border-bottom-left-radius: 0.5rem;
-        }
-
-        button {
-            background: var(--text);
-            border: 0;
-            cursor: pointer;
-
-            .postfix {
-                background: linear-gradient(to right, var(--primary-light), var(--primary));
-                padding: 1rem 2rem;
-                color: white;
-                font-size: 2rem;
-                border-top-right-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
-                transition: all .3s;
-
-                &:hover {
-                    background: linear-gradient(to right, var(--secondary-light), var(--secondary));
-                }
-            }
-        }
-
-        input {
-            outline: 0;
-            border: 0;
-            min-width: 200px;
-            padding: 1rem 2rem;
-            line-height: 2.2rem;
-            background: var(--primary-light);
-
-            @include md {
-                min-width: 400px;
-            }
-
-            &::placeholder {
-                color: var(--primary-middle);
-            }
-        }
-    }
-
-
 }

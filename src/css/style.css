@@ -3,6 +3,8 @@
   --primary-light: #edf6ff;
   --primary-middle: #1763a9;
   --primary-dark: #00152a;
+  --background-dark-menu: #000a14;
+  --background-dark-aside: #000e1c;
   --secondary: #898989;
   --secondary-light: #eeeeee;
   --secondary-dark: #191919;
@@ -57,7 +59,8 @@ html {
 body {
   font-family: var(--font-roboto-r);
   font-size: 1.6rem;
-  color: var(--secondary-dark);
+  color: var(--secondary-light);
+  background-color: var(--background-dark-menu);
 }
 
 h1,
@@ -68,7 +71,7 @@ h5,
 h6 {
   font-family: var(--font-cnew);
   font-weight: 700;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 img {
@@ -389,7 +392,7 @@ img {
   }
 }
 .cards .card {
-  background: var(--primary-light);
+  background: var(--background-dark-aside);
   height: 40rem;
   max-width: 30rem;
   border-radius: 5px;
@@ -413,11 +416,16 @@ img {
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary-dark);
+  color: var(--primary);
   text-align: center;
 }
 .cards .card .card-body .card-text {
   text-align: justify;
+  color: var(--primary-light);
+  transition: all 0.3s;
+}
+.cards .card .card-body .card-text:hover {
+  color: var(--primary);
 }
 .cards .card .card-body .btn {
   margin-top: auto;
@@ -426,15 +434,16 @@ img {
 .btn {
   border: none;
   background: var(--primary);
-  color: var(--primary-light);
+  color: var(--background-dark-menu);
+  font-weight: bold;
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
 }
 .btn:hover {
-  background: var(--secondary-dark);
-  color: var(--white);
+  background: var(--primary-middle);
+  color: var(--primary-light);
 }
 
 .slider .slider-items .slider-item {
@@ -557,7 +566,7 @@ img {
   letter-spacing: 0.3rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary-dark);
+  color: var(--primary);
 }
 .text-subtitle {
   font-family: var(--font-cnew);
@@ -573,10 +582,10 @@ img {
 }
 
 .star-primary {
-  color: var(--primary-dark);
+  color: var(--primary-middle);
 }
 .star-primary-middle {
-  color: var(--primary-middle);
+  color: var(--secondary);
 }
 
 .grid-container {
@@ -602,7 +611,7 @@ img {
   grid-area: nav;
   grid: "picture" auto "nav-items" auto/auto;
   padding: 2rem 0;
-  background: var(--primary);
+  background: var(--background-dark-menu);
 }
 @media only screen and (min-width: 768px) {
   .grid-container header nav {
@@ -632,8 +641,8 @@ img {
 }
 .grid-container header nav .menu-burger .icon-burger {
   font-size: 5rem;
-  color: var(--secondary-dark);
-  border: 1px solid var(--secondary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
   padding: 0 2rem;
   border-radius: 1rem;
 }
@@ -661,7 +670,7 @@ img {
   padding: 2rem 0;
 }
 .grid-container header nav ul li a {
-  color: var(--secondary-light);
+  color: var(--primary-light);
   font-weight: 700;
   transition: all 0.3s;
   font-size: 1.8rem;
@@ -674,13 +683,13 @@ img {
   }
 }
 .grid-container header nav ul li a:hover {
-  color: var(--secondary-dark);
+  color: var(--primary);
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--secondary-dark);
+  border-bottom: 1px solid var(--primary);
 }
 .grid-container header .slider {
   grid-area: banner;
-  background: var(--primary-middle);
+  background: var(--background-dark-menu);
 }
 
 main {
@@ -704,13 +713,13 @@ main .experience {
   }
 }
 main .experience .timeline {
-  color: var(--primary-dark);
-  border-bottom: 1px solid var(--secondary-light);
+  color: var(--primary-light);
+  border-bottom: 1px solid var(--primary);
 }
 @media only screen and (min-width: 768px) {
   main .experience .timeline {
     text-align: center;
-    border-right: 1px solid var(--secondary-light);
+    border-right: 1px solid var(--primary);
     border-bottom: none;
   }
   main .experience .timeline p {
@@ -728,7 +737,7 @@ main .experience .content ul {
 
 aside {
   grid-area: aside;
-  background: var(--primary-light);
+  background: var(--background-dark-aside);
 }
 @media only screen and (min-width: 992px) {
   aside {
@@ -738,7 +747,7 @@ aside {
 aside .bar-skill {
   margin: 2rem 0;
   height: 5px;
-  background: var(--primary-middle);
+  background: var(--secondary-light);
   position: relative;
 }
 aside .bar-skill .bar-skill-progress {
@@ -746,13 +755,13 @@ aside .bar-skill .bar-skill-progress {
   height: 5px;
   top: 0;
   left: 0;
-  background: var(--primary-dark);
+  background: var(--secondary);
 }
 aside .bar-skill .bar-skill-dot {
   position: absolute;
   height: 10px;
   width: 10px;
-  background: var(--secondary);
+  background: var(--secondary-dark);
   top: -2.5px;
   border-radius: 50%;
 }
@@ -820,12 +829,13 @@ aside .stars-container i {
   margin: 0 1rem;
 }
 aside a {
-  color: var(--primary-dark);
+  color: var(--primary-light);
   cursor: pointer;
   text-align: center;
 }
 aside a:hover {
-  color: var(--secondary-light);
+  color: var(--primary-dark);
+  font-weight: bold;
 }
 aside a .social-container {
   display: block;
@@ -847,15 +857,16 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--primary);
+  background: var(--background-dark-menu);
   padding: 3rem 1rem !important;
+  border-top: 1px solid var(--primary);
 }
 footer .footer-title {
   font-size: 2rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--secondary-dark);
+  color: var(--primary-light);
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -865,7 +876,7 @@ footer .footer-title {
   }
 }
 footer .footer-subtitle {
-  color: var(--secondary-light);
+  color: var(--primary-light);
   font-family: var(--font-cnew);
   font-size: 1.8rem;
   text-align: center;
@@ -876,59 +887,14 @@ footer .footer-subtitle {
   }
 }
 footer .send-message {
-  color: var(--secondary-light);
+  color: var(--primary);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s;
 }
 footer .send-message:hover {
-  color: var(--secondary-dark);
-}
-footer form {
-  display: flex;
-  align-items: center;
-}
-footer form .prefix {
-  background: linear-gradient(to right, var(--primary), var(--primary-light));
-  padding: 1rem 2rem;
-  color: white;
-  font-size: 1.8rem;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-footer form button {
-  background: var(--text);
-  border: 0;
-  cursor: pointer;
-}
-footer form button .postfix {
-  background: linear-gradient(to right, var(--primary-light), var(--primary));
-  padding: 1rem 2rem;
-  color: white;
-  font-size: 2rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  transition: all 0.3s;
-}
-footer form button .postfix:hover {
-  background: linear-gradient(to right, var(--secondary-light), var(--secondary));
-}
-footer form input {
-  outline: 0;
-  border: 0;
-  min-width: 200px;
-  padding: 1rem 2rem;
-  line-height: 2.2rem;
-  background: var(--primary-light);
-}
-@media only screen and (min-width: 768px) {
-  footer form input {
-    min-width: 400px;
-  }
-}
-footer form input::placeholder {
-  color: var(--primary-middle);
+  color: var(--primary-light);
 }
 
 /*# sourceMappingURL=style.css.map */

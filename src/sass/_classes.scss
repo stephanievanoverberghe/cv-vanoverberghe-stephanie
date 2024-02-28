@@ -80,7 +80,7 @@
         letter-spacing: 0.3rem;
         font-weight: 700;
         text-transform: uppercase;
-        color: var(--secondary-dark);
+        color: var(--primary);
 
         @include md {}
     }
@@ -104,10 +104,10 @@
 
 .star {
     &-primary {
-        color: var(--primary-dark);
+        color: var(--primary-middle);
     }
 
     &-primary-middle {
-        color: var(--primary-middle);
+        color: var(--secondary);
     }
 }

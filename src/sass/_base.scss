@@ -5,7 +5,8 @@ html {
 body {
     font-family: var(--font-roboto-r);
     font-size: 1.6rem;
-    color: var(--secondary-dark);
+    color: var(--secondary-light);
+    background-color: var(--background-dark-menu);
 }
 
 h1,
@@ -16,7 +17,7 @@ h5,
 h6 {
     font-family: var(--font-cnew);
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary-light);
 }
 
 img {
